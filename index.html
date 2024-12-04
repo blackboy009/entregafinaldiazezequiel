@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Carrito de Compras</h1>
+
+    <!-- imagen del carrito falta aplicar un hover o algo similar -->
+    <div id="cart-icon" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+    </div>
+
+    <!-- Productos del stand de cafe -->
+    <div id="products">
+      <h2>Productos</h2>
+      <div class="product" data-id="1">
+        <p>mocca con leche - $2500</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+      <div class="product" data-id="2">
+        <p>cappuchino - $3500</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+      <div class="product" data-id="3">
+        <p>Frapuchino - $4000</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- Modal del carrito-->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <span id="close-modal" class="close-modal">&times;</span>
+        <h2>Mi Carrito</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0</span></p>
+
+        <!-- funcionalidad de descuento, falta logica para que aplique el descuento sobre el total o unitario -->
+        <div id="discount-section">
+          <input type="text" id="discount-code" placeholder="Código de descuento">
+          <button id="apply-discount">Aplicar descuento</button>
+          <p id="discount-info" style="color: green;"></p>
+        </div>
+
+        <!-- finalizacion de la compra -->
+        <div id="checkout-section">
+          <button id="checkout-button">Realizar Compra</button>
+        </div>
+
+        <button id="clear-cart">Vaciar carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
